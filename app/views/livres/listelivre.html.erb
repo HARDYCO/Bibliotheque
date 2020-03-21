@@ -1,0 +1,9 @@
+<h1>Livre</h1>
+<%=  session[:auth].inspect  %>
+<% @livres.each do |livre| %>
+  <h2> <%= livre.titre %> </h2>
+  <p><%= livre.description %>  écrit par <i><%= livre.auteur %></i>   </p>
+  <p>
+    <a href="<%= livre_path(livre.id) %>" class="btn btn-primary">Consulter</a>
+  </p>
+<% end %>

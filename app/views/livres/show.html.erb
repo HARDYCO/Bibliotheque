@@ -1,0 +1,11 @@
+<% content_for(:title, @livre.titre) %>
+
+<h1><%= @livre.titre %></h1>
+<p><%=@livre.description%></p>
+<p>Genre : <%= @livre.genres.map(&:libelle).join(',') %></p>
+<p>a été écrit par <%= @livre.auteur %></p>
+
+
+<p>
+  <a href="<%= livres_path %>" class="btn btn-primary">Retour</a>
+</p>

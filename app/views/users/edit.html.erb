@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+  <div class="panel-heading">S'inscrire </div>
+  <div class="panel-body">
+    <%= form_for @user, url:profil_path, html:{class:'form-horizontal'} do |f| %>
+    <div class="form-group">
+      <%= f.label :nom, "Nom", class:'col-md-4 control-label' %>
+     <div class="col-md-6">
+       <%= f.text_field :nom, class: 'form-control' %>
+     </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :prenom,"prenom", class:'col-md-4 control-label' %>
+     <div class="col-md-6">
+       <%= f.text_field :prenom, class: 'form-control' %>
+     </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :mail, "email", class:'col-md-4 control-label' %>
+     <div class="col-md-6">
+       <%= f.email_field :mail, class: 'form-control' %>
+     </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, "mot de passe", class:'col-md-4 control-label' %>
+     <div class="col-md-6">
+       <%= f.password_field :password, class: 'form-control' %>
+     </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, "Confirmation mot de passe", class:'col-md-4 control-label' %>
+     <div class="col-md-6">
+       <%= f.password_field :password_confirmation, class: 'form-control' %>
+     </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :adresse, "adresse", class:'col-md-4 control-label' %>
+     <div class="col-md-6">
+       <%= f.text_field :adresse, class: 'form-control' %>
+     </div>
+    </div>
+    <div class="form-group">
+      <div class="cold-md-6 col-md-offset-4">
+        <button type="submit" class="btn btn-primary">
+          s'inscrire
+        </button>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

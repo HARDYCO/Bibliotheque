@@ -1,0 +1,6 @@
+<h1>Livre</h1>
+<% @livre.each do |livre| %>
+<a href="<%=livre_path(livre.id)%>"><%= livre.titre %></a>, auteur : <%= livre.auteur %>
+
+<br>
+<% end %>

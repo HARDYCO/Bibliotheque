@@ -5,5 +5,7 @@
 
 </p>
   <a href="<%= livre_path(livre.id) %>" class="btn btn-primary">Consulter</a>
+  <% if user_signed_in?  %>
   <a href="<%= edit_livre_path(livre.id) %>" class="btn btn-primary">Editer</a>
   <a href="<%= livre_path(livre.id) %>" class="btn btn-danger" data-confirm="voulez vous vraiment supprimer ce livre?" data-method="DELETE">Supprimer</a>
+  <% end%>

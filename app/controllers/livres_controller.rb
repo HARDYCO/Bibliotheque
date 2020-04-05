@@ -26,6 +26,7 @@ class LivresController < ApplicationController
   def show
   end
   def edit
+    @genres= Genre.all
   end
   def update
     @livre.update(livre_param)

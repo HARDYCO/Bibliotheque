@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   get '/api', to:'livres#api', as: 'api'
   get'/Llivres', to:'livres#listelivre', as: 'Llivres'
   get'/inscription', to: 'users#new', as: 'inscription'
-  get'/profil', to:'users#edit', as:'profil'
   get '/rechercheLivre', to: 'livres#recherchelivre'
-  patch'/profil', to:'user#update'
+  get '/profil', to: 'users#edit', as: :profil
+  patch'/profil', to:'users#update'
 
   get '/login', to:'sessions#new', as: :new_session
   post '/login', to:'sessions#create'

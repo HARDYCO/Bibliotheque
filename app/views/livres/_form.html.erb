@@ -20,6 +20,13 @@
       <br>
       <%= @livre.genres.map(&:libelle).join(',') %>
       <br>
+      <% @genres.each do |genre| %>
+
+        <p> <%= genre.libelle %> <input type="checkbox" id="scales" ></p>
+
+      <% end %>
+
+
       <button type="button" name="button">Modifier les genres</button>
 
 

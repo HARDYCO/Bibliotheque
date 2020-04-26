@@ -21,9 +21,16 @@ class UsersController < ApplicationController
   def edit
     #@user = User.last
     @user = current_user
+
   end
   def update
-
+    @user = current_user
+    user_params = params.require(:user).permit(:nom, :prenom,:mail,:adresse)
+    if @user.update(user_params)
+      redirect_to profil_path,notice: "compte modifié avec succès"
+    else
+      render :edit
+    end
   end
     #
     #
